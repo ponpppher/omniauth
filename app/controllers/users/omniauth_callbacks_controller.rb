@@ -1,4 +1,5 @@
 class Users::OmniauthCallbacksController < ApplicationController
+  skip_before_action :authenticate_user!
   def twitter
     callback_from :twitter
   end
